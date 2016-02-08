@@ -1,0 +1,8 @@
+<!ENTITY chalkie.description "Title">
+<!ENTITY chalkie.application.url "URL">
+<!ENTITY chalkie.move.up "Move Up" >
+<!ENTITY chalkie.move.down "Move Down" >
+<!ENTITY chalkie.add "Add.." >
+<!ENTITY chalkie.edit "Edit.." >
+<!ENTITY chalkie.delete "Delete" >
+<!ENTITY chalkie.new.separator "|" >

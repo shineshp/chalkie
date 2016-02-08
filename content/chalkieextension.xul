@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://chalkieextension/skin/overlay.css" type="text/css"?>
+<!DOCTYPE chalkieextension SYSTEM "chrome://chalkieextension/locale/about.dtd">
+<overlay id="chalkieextension" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript" src="shinutoolbar.js" />
+
+<popup id="contentAreaContextMenu">
+  <menuitem id="ce-dev-ipd" label="Dev Box IPD" insertafter="context-stop" oncommand="callme(this.id)"/>
+  <menuitem id="ce-dev-im" label="Dev Box IM" insertafter="context-stop" oncommand="callme(this.id)"/>
+  <menuitem id="ce-stg-ipd" label="Stage IPD" insertafter="context-stop" oncommand="callme(this.id)"/>
+  <menuitem id="ce-stg-im" label="Stage IM" insertafter="context-stop" oncommand="callme(this.id)"/>
+  <menuitem id="ce-prd-ipd" label="Jira" insertafter="context-stop" oncommand="callme(this.id)"/>
+  <menuitem id="ce-prd-im" label="Jira PE Track" insertafter="context-stop" oncommand="callme(this.id)"/>
+</popup>
+
+</overlay>

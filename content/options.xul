@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://chalkieextension/locale/options/options.dtd">
+<prefwindow title="Chalkie Preferences" id="chalkieextension-options" onload="ce_initialize()"
+     xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script type="application/x-javascript" src="chrome://chalkieextension/content/options/tools.js"/>
+    <prefpane id="myOptions" label="oSet Options">
+        <preferences>
+            <preference id="pref-option1" name="myapp.myoption1" type="string"/>
+            <preference id="pref-option2" name="myapp.myoption2" type="string"/>
+            <preference id="pref-option3" name="myapp.myoption3" type="string"/>
+        </preferences>
+    <hbox align="top">
+      <listbox id="chalkie-tools" flex="1" preference="pref-option2" onselect="Chalkie.Options.selectTool()">
+        <listhead>
+          <listheader label="&chalkie.description;"/>
+          <listheader label="&chalkie.application.url;"/>
+        </listhead>
+        <listcols>
+          <listcol/>
+          <listcol flex="1"/>
+          <listcol/>
+        </listcols>
+      </listbox>
+      <vbox>
+        <button id="chalkie-move-up-tool" disabled="true" label="&chalkie.move.up;" oncommand="Chalkie.Options.moveUpTool()"/>
+        <button id="chalkie-move-down-tool" disabled="true" label="&chalkie.move.down;" oncommand="Chalkie.Options.moveDownTool()"/>
+      </vbox>
+    </hbox>
+
+    <hbox>    
+		<description value="URL Title:"/>
+		<separator/>
+          <textbox id="add-url-title"
+                   label="urlname" 
+				   preference="pref-option1" 
+				   type="autocomplete"
+                   autocompletesearch="history"
+                   completedefaultindex="true"
+                   onkeydow="onTextBoxKeypress(event)"
+                   ontextentered="addURL()"
+                   flex="1"/>
+		<description value="URL :"/>
+		<separator/>
+		   <textbox id="add-url-textbox"
+                   label="urlname" 
+				   preference="pref-option3" 
+				   type="autocomplete"
+                   autocompletesearch="history"
+                   completedefaultindex="true"
+                   onkeydow="onTextBoxKeypress(event)"
+                   ontextentered="addURL()"
+                   flex="1"/>
+		<button id="chalkie-add-tool" label="&chalkie.add;" tooltiptext="Add a site to Context Menu" oncommand="addURL()"/>
+		<button id="chalkie-edit-tool" disabled="true" label="&chalkie.edit;" oncommand="Chalkie.Options.editURL()"/>
+		<button id="chalkie-delete-tool" disabled="true" label="&chalkie.delete;" oncommand="Chalkie.Options.deleteURL()"/>
+		<spacer/>
+    </hbox>
+	</prefpane>
+
+<script>
+function optionsOpen(){
+	  window.openDialog("chrome://chalkieextension/content/options/tools.xul", "chalkieextension-pane", "centerscreen,chrome,modal");
+	  //, message, url);
+}
+</script>
+</prefwindow>

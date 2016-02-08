@@ -1,0 +1,7 @@
+*.rdf
+*.js
+*.properties
+*.xul
+*.dtd
+*.png
+*.css
