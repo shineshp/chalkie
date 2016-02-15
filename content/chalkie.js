@@ -5,7 +5,7 @@ function callme(tag){
 			url="https://dev.sd.intuit.com/ipd/ipdproductsell";
 				break;
 		case "ce-dev-im"  :
-			url="https://dev.sd.intuit.com/";
+			url="https://dev-intuitmarket.intuitcdn.net/ui/build/css/IpdCss_1.0.0.css";
 				break;
 		case "ce-stg-ipd"  :
 			url="https://qdcstage.intuitmarket.intuit.com/ipd/ipdproductsell";
@@ -20,13 +20,13 @@ function callme(tag){
 			url="https://jira.intuit.com/secure/RapidBoard.jspa?rapidView=10812&view=planning.nodetail";
 				break;
 	}
- shinuex_LoadURL(url);
+ chalkie_LoadURL(url);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-// The shinuex_LoadURL() function loads the specified URL in the browser.
+// The chalkie_LoadURL() function loads the specified URL in the browser.
 ////////////////////////////////////////////////////////////////////////////////
-function shinuex_LoadURL(url)
+function chalkie_LoadURL(url)
 {
     // Set the browser window's location to the incoming URL
     window._content.document.location = url;

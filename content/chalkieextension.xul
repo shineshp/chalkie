@@ -3,7 +3,7 @@
 <!DOCTYPE chalkieextension SYSTEM "chrome://chalkieextension/locale/about.dtd">
 <overlay id="chalkieextension" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-<script type="application/x-javascript" src="shinutoolbar.js" />
+<script type="application/x-javascript" src="chalkie.js" />
 
 <popup id="contentAreaContextMenu">
   <menuitem id="ce-dev-ipd" label="Dev Box IPD" insertafter="context-stop" oncommand="callme(this.id)"/>

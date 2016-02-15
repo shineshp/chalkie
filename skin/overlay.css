@@ -1,25 +1,17 @@
-/* This is just an example.  You shouldn't do this. */
-menuitem#shinuextension-hello {
-  color: red !important;
-}
-#shinuextension-hello
+#chalkieextension-toolbar-button
 {
-  color: red ! important;
-}
-#shinuextension-toolbar-button
-{
-  list-style-image: url("chrome://shinuextension/skin/helloworld.png");
+  list-style-image: url("chrome://chalkieextension/skin/icon.png");
   -moz-image-region: rect(0px 24px 24px 0px);
 }
-#shinuextension-toolbar-button:hover
+#chalkieextension-toolbar-button:hover
 {
   -moz-image-region: rect(24px 24px 48px  0px);
 }
-[iconsize="small"] #shinuextension-toolbar-button
+[iconsize="small"] #chalkieextension-toolbar-button
 {
   -moz-image-region: rect( 0px 40px 16px 24px);
 }
-[iconsize="small"] #shinuextension-toolbar-button:hover
+[iconsize="small"] #chalkieextension-toolbar-button:hover
 {
   -moz-image-region: rect(24px 40px 40px 24px);
 }
